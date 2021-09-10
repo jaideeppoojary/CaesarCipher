@@ -85,7 +85,8 @@ def autoCipherDecript(encriptedString, flag ):
 
     if(flag in decriptString):
       print("\n [ >> ]  "  + decriptString + "\n" )
-      break
+      return
+  print(" [ ! ] Entered flag not in Encrypted String...")
     
 
   
