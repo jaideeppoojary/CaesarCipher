@@ -9,27 +9,31 @@ asciiOfSmallZ =122
 
 def start():
   # Getting Sting value from user
-  encriptedString = input(" [ + ] Enter String : ")
-  print("\n *** Enter your choice:*** \n")
-
-  # Manual decript we use enter skip character (how much charecter  + or -) 
-  choice = int( input(" [ 1 ] Manual Encript/Decript \n [ 2 ] Auto Decript (not ready at) \n [ >> ] "))
-
-  if ( choice == 1):
-    manualCipherDecript(encriptedString);
-
-
-def manualCipherDecript(encriptedString):
-  while True:
-    skip = int(input(" [ + ] how much to skip charecter : "))
-    print("\n [ >> ]  "  + cipherEncryptDecrypt(encriptedString, skip) + "\n" )
-    temp = input(" [ ? ] Want to Check further (y/n) ").upper()
+  while True:    
     
-    if(temp !=  "Y"  ):
-      break
+    print("\n *** Enter your choice:*** \n")
+
+    # Manual decript we use enter skip character (how much charecter  + or -) 
+    encriptedString = input(" [ + ] Enter String : ")
+    choice = int( input(" [ 1 ] Manual Encript/Decript \n [ 2 ] Auto Decript\n [ 3 ] Exit \n [ >> ]  "))
+    
+    if ( choice == 1):
+      skip = int(input(" [ + ] how much to skip count : ")) % 27
+      print("\n [ >> ]  "  + cipherEncryptDecrypt(encriptedString, skip ) + "\n" )
+
+    elif (choice == 2):
+      flag = input(" [ + ] Enter flag(hint word): ")
+      autoCipherDecript(encriptedString, flag )
+
+    else:
+      print("\n ++  ++")
+      print("  \__/")
+      print("         --Bye")
+      exit(0)
 
 
-def cipherEncryptDecrypt( encriptedString, skipCharecter):
+def cipherEncryptDecrypt(encriptedString, skipCharecter ):
+  
   decriptString = ""
   for singleCharecter in encriptedString:
 
@@ -72,6 +76,17 @@ def directionChange(newChar, aPosition, zPosition):
     newChar = (zPosition + 1) - (aPosition- newChar)
   
   return newChar
+
+
+def autoCipherDecript(encriptedString, flag ):
+  # skip = 0
+  for skip in range(26,-1,-1):
+    decriptString = cipherEncryptDecrypt(encriptedString, skip)
+
+    if(flag in decriptString):
+      print("\n [ >> ]  "  + decriptString + "\n" )
+      break
+    
 
   
 # starts from here
