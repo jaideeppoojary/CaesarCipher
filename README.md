@@ -5,10 +5,9 @@ Caesar cipher is to Encrypt/decrypt string
 * Auto decrypt - by taking Hint word as input.
 * Auto decript can the flag( Hint word) is present in Encripted string or not.
 
-![image](https://user-images.githubusercontent.com/72183261/132845962-1eb83f73-1195-4c15-aaf1-7f8f6fd20cda.png)
+![image](https://user-images.githubusercontent.com/72183261/132846694-14bd8097-0e91-4def-ba37-8f7197ece42c.png)
 
-![image](https://user-images.githubusercontent.com/72183261/132845996-6e45593e-afb1-475d-a1e4-66cfb3c21b23.png)
-
-![image](https://user-images.githubusercontent.com/72183261/132846028-ad1e5222-d44e-4599-b4b4-2da3afd37930.png)
+![image](https://user-images.githubusercontent.com/72183261/132846720-b8bd2332-7961-46c4-b75a-144acb3a305f.png)
 
 
+![image](https://user-images.githubusercontent.com/72183261/132846751-70f928aa-4b9c-4357-956d-ea065bd6a457.png)
