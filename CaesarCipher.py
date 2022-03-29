@@ -18,7 +18,7 @@ def start():
     choice = int( input(" [ 1 ] Manual Encript/Decript \n [ 2 ] Auto Decript\n [ 3 ] Exit \n [ >> ]  "))
     
     if ( choice == 1):
-      skip = int(input(" [ + ] how much to skip count : ")) % 27
+      skip = int(input(" [ + ] how much to skip count : "))
       print("\n [ >> ]  "  + cipherEncryptDecrypt(encriptedString, skip ) + "\n" )
 
     elif (choice == 2):
@@ -33,7 +33,7 @@ def start():
 
 
 def cipherEncryptDecrypt(encriptedString, skipCharecter ):
-  
+  skipCharecter %=27  
   decriptString = ""
   for singleCharecter in encriptedString:
 
@@ -85,8 +85,10 @@ def autoCipherDecript(encriptedString, flag ):
 
     if(flag in decriptString):
       print("\n [ >> ]  "  + decriptString + "\n" )
-      return
+      return decriptString
   print(" [ ! ] Entered flag not in Encrypted String...")
+  if __name__ != "__main__":
+    return " [ ! ] Entered flag not in Encrypted String..."
     
 
   
