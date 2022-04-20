@@ -5,6 +5,16 @@ Caesar cipher is to Encrypt/decrypt string
 * Auto decrypt - by taking Hint word as input.
 * Auto decript can the flag( Hint word) is present in Encripted string or not.
 
+## Prerequisite
+Installing Pyperclip
+```
+pip install pyperclip
+```
+Installing tkinter
+```
+pip install tk
+```
+
 ## GUI
 
 ![image](https://user-images.githubusercontent.com/72183261/160582959-f998f6f7-574e-4bea-8f27-0812c7de1731.png)
